@@ -4,4 +4,12 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="Static\" />
+      <None Remove="Static\CSS\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Static\" />
+      <Folder Include="Static\CSS\" />
+    </ItemGroup>
 </Project>
