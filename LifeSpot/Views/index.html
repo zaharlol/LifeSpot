@@ -6,25 +6,20 @@
     <!--Подключение стилей по относительному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../Static/JS/index.js"></script>
-</head>
-    <header class="bordered">
-        <h1>LifeSpot — прямые трансляции с улиц</h1>
-        <p>На сайте вы можете многое</p>
-        <input type="text" oninput="
-               let inputString=document.getElementsByTagName('input')[0].value.toLowerCase();
-               let elements=document.getElementsByClassName('video-container');
-               for (let i=0; i <= elements.length; i++ ){
-
-        let videoText = elements[i].querySelector(".video-title").innerText;
-
-        if(!videoText.toLowerCase().includes(inputString.toLowerCase())){
-
-        elements[i].style.display = 'none';
-        } else {
-        elements[i].style.display = 'inline-block';
+    <script>    checkAge();
+                handleSession()
+                sessionLog();
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
         }
-        } " size="50%">
-    </header>
+        setTimeout(()=>Subscribe(), 10000);
+    </script>
+</head>
+<header class="bordered">
+    <h1>LifeSpot — прямые трансляции с улиц</h1>
+    <p>На сайте вы можете многое</p>
+    <input type="text" oninput="filterContent() "size=50%>
+</header>
     <body>
         <div class="video-container">
             <iframe width="350" height="200" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
